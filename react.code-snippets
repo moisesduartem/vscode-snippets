@@ -1,0 +1,53 @@
+{
+	"Just import React from 'react'": {
+		"scope": "javascript,html,javascriptreact",
+		"prefix": "ir",
+		"body": [
+			"import React from 'react';"
+		],
+		"description": "just import react"
+	},
+	"Import React & others from 'react'": {
+		"scope": "javascript,html,javascriptreact",
+		"prefix": "ir+",
+		"body": [
+			"import React, { $1 } from 'react';"
+		],
+		"description": "import react & others from 'react'"
+	},
+	"Create a React component": {
+		"scope": "javascript,html,javascriptreact",
+		"prefix": "rc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"\tfunction ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}$1() {",
+			"\t\t$3",
+			"\t\treturn (",
+			"\t\t\t$2",
+			"\t\t);",
+			"\t}",
+			"",
+			"export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}$1;"
+		],
+		"description": "import react & others from 'react'"
+	},
+	"useState statement": {
+		"scope": "javascript,html,javascriptreact",
+		"prefix": "us",
+		"body": [
+			"const [$1, set$2] = useState($3);"
+		],
+		"description": "create useState basic structure"
+	},
+	"useEffect statement": {
+		"scope": "javascript,html,javascriptreact",
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"\t$2",
+			"}, [$1]);"
+		],
+		"description": "create useEffect basic structure"
+	}
+}
